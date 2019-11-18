@@ -63,7 +63,7 @@ In this class library, Using SHA512 Hash algorithm as a default for Digest messa
 ## Usage examples
 
 ### To Sign digital signature
-> #### Using certificate file
+> ### Using certificate file
 > If you have a certificate file in PKCS#12 format contains public key and private key in the same file (.pfx or .p12 file).
 ``` csharp
 var cert = new X509Certificate2(File.ReadAllBytes("CERTIFICATE_FILE", "CERTIFICATE_PASSWORD"));
@@ -95,7 +95,7 @@ xmlDoc.DocumentElement.AppendChild(xmlDoc.ImportNode(result, true));
 File.WriteAllText("XML_SIGNED_DOCUMENT_FILE", xmlDoc.OuterXml);
 ```
 > ### Using certificate in HSM
-> If you have a certificate in PKCS#11 format that installed in your HSM
+> If you have a certificate in PKCS#11 format that installed in your HSM.
 > You must connect to a specific certificate / key in your HSM before signing.
 ``` csharp
 X509Certificate2 cert = null;
