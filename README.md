@@ -80,6 +80,7 @@ File.WriteAllText("XML_SIGNED_DOCUMENT_FILE", xmlDoc.OuterXml);
 ```
 > ### Using certificate file and private key file
 > If you have a certificate file in PKCS#12 that contains public key and identity only. Also you have a private key file in PEM format seperately.
+> You must convert PEM to XML and save the private key to XML file first.
 ``` csharp
 var cert = new X509Certificate2("CERTIFICATE_FILE");
 var privateKey = File.ReadAllText("PRIVATE_KEY_FILE");
@@ -163,3 +164,4 @@ var result = signer.VerifySignedXml(cert, signedXmlDoc);
 * [X509 wiki](https://en.wikipedia.org/wiki/X.509) - What is X509?
 * [Signature Verification - 1](https://www.signatur.rtr.at/en/vd/Pruefung.html) - To verify signature of signed XML document
 * [Signature Verification - 2](https://tools.chilkat.io/xmlDsigVerify.cshtml) - To verfiy signature of signed XML document
+* [RSA Key Converter](https://superdry.apphb.com/tools/online-rsa-key-converter) - To convert PEM to XML and vice versa
